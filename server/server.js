@@ -8,7 +8,7 @@ const { Store } = require('./models/Store');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const MONGO_URI = "mongodb://localhost/book_db";
+const MONGO_URI = process.env.MONGODB_URI || "mongodb://localhost/book_db";
 
 mongoose.Promise = global.Promise;
 
